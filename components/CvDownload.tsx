@@ -18,7 +18,7 @@ export default function CvDownload() {
           <span className="action-card__title">{cv.title}</span>
           <span className="action-card__sub">{cv.subtitle}</span>
         </span>
-        <span className="action-card__cta">Download CV</span>
+        <span className="action-card__cta">View CV</span>
       </a>
       <p className="note">View or download my CV in a new tab.</p>
     </section>
