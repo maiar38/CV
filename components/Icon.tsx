@@ -8,26 +8,6 @@ const paths = {
       <path d="M4 17v3h16v-3" />
     </>
   ),
-  monitor: (
-    <>
-      <rect x="3" y="4" width="18" height="12" rx="2" />
-      <path d="M8 20h8M12 16v4" />
-    </>
-  ),
-  database: (
-    <>
-      <ellipse cx="12" cy="5.5" rx="7" ry="2.5" />
-      <path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13" />
-      <path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" />
-    </>
-  ),
-  layers: (
-    <>
-      <path d="m12 3 9 5-9 5-9-5 9-5Z" />
-      <path d="m3 12.5 9 5 9-5" />
-      <path d="m3 17 9 5 9-5" />
-    </>
-  ),
   globe: (
     <>
       <circle cx="12" cy="12" r="9" />
@@ -49,12 +29,6 @@ const paths = {
       <path d="M14 4h6v6" />
       <path d="M20 4 10 14" />
       <path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
-    </>
-  ),
-  expand: (
-    <>
-      <path d="M15 3h6v6M9 21H3v-6" />
-      <path d="M21 3l-7 7M3 21l7-7" />
     </>
   ),
   file: (

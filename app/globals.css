@@ -1,14 +1,15 @@
-/* ---------- Design tokens ---------- */
+/* ---------- Design tokens (dark theme) ---------- */
 :root {
-  --bg: #f6f5f1;
-  --surface: #ffffff;
-  --hero: #e7f0ed;
-  --ink: #17201e;
-  --muted: #5a6662;
-  --line: #e0ddd5;
-  --accent: #0e6b5e;
-  --accent-strong: #0a5148;
-  --accent-soft: #d5e8e3;
+  --bg: #0e1113;
+  --surface: #151a1d;
+  --surface-hover: #1a2024;
+  --hero: #131c1d;
+  --ink: #e9edeb;
+  --muted: #9ba7a3;
+  --line: #252d31;
+  --accent: #6fb8a9;
+  --accent-strong: #8fcbbe;
+  --accent-soft: #1b2d2b;
 
   --radius-lg: 24px;
   --radius-md: 16px;
@@ -19,6 +20,8 @@
 
   --font: "Plus Jakarta Sans Variable", "Segoe UI", system-ui, -apple-system,
     Arial, sans-serif;
+
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
@@ -30,6 +33,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  background: var(--bg);
 }
 
 body {
@@ -62,8 +66,7 @@ h2,
 p,
 dl,
 dd,
-ul,
-figure {
+ul {
   margin: 0;
 }
 
@@ -91,22 +94,15 @@ ul {
 }
 
 .section + .section {
-  margin-top: 64px;
+  margin-top: 56px;
 }
 
 .section__title {
+  padding: 0 12px;
   font-size: 1.875rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
-  padding: 0 12px;
-}
-
-.section__lead {
-  max-width: 62ch;
-  margin-top: 10px;
-  padding: 0 12px;
-  color: var(--muted);
 }
 
 .eyebrow {
@@ -137,7 +133,6 @@ ul {
   padding: 28px 24px 24px;
   text-align: center;
   background: var(--hero);
-  border-color: var(--accent-soft);
 }
 
 .hero__photo {
@@ -145,7 +140,6 @@ ul {
   height: 200px;
   padding: 4px;
   border-radius: 50%;
-  background: var(--surface);
   border: 3px solid var(--accent);
 }
 
@@ -176,8 +170,8 @@ ul {
   margin-top: 12px;
   padding: 8px 18px;
   border-radius: var(--radius-pill);
-  background: var(--accent);
-  color: #ffffff;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -205,19 +199,18 @@ ul {
   font-weight: 700;
 }
 
-/* ---------- CV options ---------- */
-.cv-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 24px;
+.info__row dd {
+  color: #cdd5d2;
 }
 
-.cv-item {
+/* ---------- Action card (CV download + infographic link) ---------- */
+.action-card {
   display: flex;
   align-items: center;
   gap: 24px;
   min-height: 96px;
-  padding: 18px 32px;
+  margin-top: 24px;
+  padding: 20px 28px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
@@ -225,17 +218,17 @@ ul {
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.cv-item:hover {
+.action-card:hover {
   border-color: var(--accent);
-  background: #fbfcfb;
+  background: var(--surface-hover);
 }
 
-.cv-item__download {
+.action-card__lead {
   flex-shrink: 0;
-  color: var(--ink);
+  color: var(--accent);
 }
 
-.cv-item__text {
+.action-card__text {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -243,94 +236,46 @@ ul {
   min-width: 0;
 }
 
-.cv-item__title {
+.action-card__title {
   font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
-.cv-item__stack {
+.action-card__sub {
   font-size: 1.0625rem;
   color: var(--muted);
 }
 
-.cv-item__icon {
+.action-card__cta {
+  display: inline-flex;
   flex-shrink: 0;
-  color: var(--accent);
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: #0b1413;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.action-card:hover .action-card__cta {
+  background: var(--accent-strong);
 }
 
 .note {
-  margin-top: 40px;
+  margin-top: 32px;
   text-align: center;
   font-size: 1.125rem;
   color: var(--muted);
 }
 
-/* ---------- Addadak infographic ---------- */
-.infographic {
-  margin-top: 24px;
-}
-
-.infographic__frame {
-  display: block;
-  overflow: hidden;
-  padding: 12px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  cursor: zoom-in;
-  transition: border-color 0.15s ease;
-}
-
-.infographic__frame:hover {
-  border-color: var(--accent);
-}
-
-.infographic__frame img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.infographic__hint {
-  display: none;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--muted);
-}
-
-.infographic__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  background: var(--surface);
-  color: var(--ink);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color 0.15s ease, color 0.15s ease;
-}
-
-.button:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 /* ---------- Links card ---------- */
 .links {
-  margin-top: 64px;
+  margin-top: 56px;
   padding: 36px 24px;
 }
 
@@ -417,48 +362,39 @@ ul {
   }
 
   .section + .section {
-    margin-top: 48px;
+    margin-top: 44px;
   }
 
-  .cv-item {
-    gap: 16px;
-    min-height: 84px;
-    padding: 16px 18px;
+  .action-card {
+    flex-wrap: wrap;
+    gap: 14px 16px;
+    padding: 18px;
   }
 
-  .cv-item__title {
+  .action-card__lead {
+    align-self: flex-start;
+  }
+
+  .action-card__title {
     font-size: 1.125rem;
   }
 
-  .cv-item__stack {
+  .action-card__sub {
     font-size: 0.9375rem;
   }
 
+  .action-card__cta {
+    justify-content: center;
+    width: 100%;
+  }
+
   .note {
-    margin-top: 28px;
+    margin-top: 24px;
     font-size: 1rem;
   }
 
-  .infographic__frame {
-    padding: 6px;
-    border-radius: var(--radius-md);
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .infographic__frame img {
-    width: 860px;
-    max-width: none;
-    border-radius: 8px;
-  }
-
-  .infographic__hint {
-    display: block;
-  }
-
   .links {
-    margin-top: 48px;
+    margin-top: 44px;
     padding: 8px 20px;
   }
 

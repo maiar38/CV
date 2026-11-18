@@ -1,6 +1,6 @@
 import ProfileHero from "@/components/ProfileHero";
 import PersonalInfo from "@/components/PersonalInfo";
-import CvOptions from "@/components/CvOptions";
+import CvDownload from "@/components/CvDownload";
 import ProjectInfographic from "@/components/ProjectInfographic";
 import SocialLinks from "@/components/SocialLinks";
 
@@ -10,7 +10,7 @@ export default function CvPage() {
       <ProfileHero />
       <PersonalInfo />
       <hr className="divider" />
-      <CvOptions />
+      <CvDownload />
       <ProjectInfographic />
       <SocialLinks />
     </main>

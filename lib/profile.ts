@@ -28,47 +28,18 @@ export const personalInfo: { label: string; value: string }[] = [
   },
 ];
 
-export type CvIcon = "monitor" | "database" | "layers";
-
-export const cvOptions: {
-  title: string;
-  stack: string;
-  icon: CvIcon;
-  href: string;
-}[] = [
-  {
-    title: "Frontend Developer",
-    stack: "React · Next.js · TypeScript",
-    icon: "monitor",
-    href: CV_URL,
-  },
-  {
-    title: "Backend Developer",
-    stack: "Node.js · Express.js · MongoDB",
-    icon: "database",
-    href: CV_URL,
-  },
-  {
-    title: "Full Stack Developer",
-    stack: "Frontend + Backend",
-    icon: "layers",
-    href: CV_URL,
-  },
-];
+export const cv = {
+  title: "Maiar Emam — CV",
+  subtitle: "Software Engineer | Full Stack Developer",
+  href: CV_URL,
+};
 
 export const addadak = {
   eyebrow: "DigiLians Graduation Project",
   title: "Addadak Infographic",
   description:
     "A team-built utility metering and billing platform. My part: the Notification Server behind its billing, payment and usage alerts.",
-  image: {
-    src: "/images/addadak-infographic.webp",
-    width: 2667,
-    height: 1500,
-    alt: "Addadak — DigiLians graduation project infographic: smart utility management ecosystem to monitor, predict and pay electricity, gas and water bills.",
-  },
-  pdf: "/files/addadak-infographic.pdf",
-  repo: "https://github.com/Toka999/Addadak",
+  pdf: "https://drive.google.com/file/d/1no4U27SrVGgkQXllFO27w9fKG3GpLpK_/view?usp=drive_link",
 };
 
 export type LinkIcon = "globe" | "github" | "linkedin";
