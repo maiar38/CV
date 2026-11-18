@@ -5,7 +5,7 @@ export default function CvDownload() {
   return (
     <section className="section" aria-labelledby="cv-heading">
       <h2 id="cv-heading" className="section__title">
-        Download CV
+        View CV
       </h2>
       <a
         className="action-card"
@@ -18,7 +18,10 @@ export default function CvDownload() {
           <span className="action-card__title">{cv.title}</span>
           <span className="action-card__sub">{cv.subtitle}</span>
         </span>
-        <span className="action-card__cta">View CV</span>
+        <span className="action-card__cta">
+          View CV
+          <Icon name="external" size={16} />
+        </span>
       </a>
       <p className="note">View or download my CV in a new tab.</p>
     </section>
