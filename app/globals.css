@@ -251,7 +251,9 @@ ul {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  min-width: 190px;
   padding: 10px 20px;
   border-radius: var(--radius-pill);
   background: var(--accent);

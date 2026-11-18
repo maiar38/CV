@@ -13,7 +13,7 @@ export default function CvDownload() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Icon name="download" className="action-card__lead" />
+        <Icon name="file" className="action-card__lead" />
         <span className="action-card__text">
           <span className="action-card__title">{cv.title}</span>
           <span className="action-card__sub">{cv.subtitle}</span>
